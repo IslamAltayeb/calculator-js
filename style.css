@@ -1,0 +1,147 @@
+/* global prop */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-color: #19283f;       
+    --section-color: #eff7fa;
+    --red-color:  #ff3150;
+    --yellow-color:#ffc400;
+}
+
+body {
+    background: var(--section-color);
+}
+
+header{
+    background-color: var(--dark-color);   
+}
+
+h1{
+    text-align: center;
+    color: var(--section-color);
+    padding: 8px;
+    font-size: 2.5rem;
+}
+
+/* start dark-mode button */
+.dark-mode{
+    background-color: rgb(24, 23, 23);
+}
+
+.btn-dark{
+  outline: none;
+  width: 40px;
+  height: 40px;  
+  margin-left: 10%;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: 2px solid var(--section-color);
+  transition: 0.4s;
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png")
+    no-repeat center var(--dark-color);
+  background-size: 25px;
+  cursor: pointer;
+}
+.btn-light {
+    cursor: pointer;
+    outline: none;
+    width: 40px;
+    height: 40px;  
+    margin-left: 10%;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--section-color);
+    transition: 0.4s;
+    background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png")
+    no-repeat center var(--dark-color);
+    background-size: 20px;
+}
+/* end dark-mode button */
+
+/* start container section */
+#container{	
+	height: 450px;
+	margin: 0 auto;    	
+}
+#calculator{
+	width: 320px;
+	height: 520px;
+	background-color: var(--dark-color);
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* end container section */
+
+/* start output section */
+#result{
+	height: 100px;
+    background-color: var(--section-color);
+    border-radius: 15px 15px 0 0;
+}
+
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 50px;
+    color: var(--dark-color);
+}
+/* end output section */
+
+/* start during operator */
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: var(--dark-color);
+}
+/* end during operator */
+
+/* start buttons */
+#keyboard{
+	height: 400px;
+}
+.operator, .number{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 22px;
+}
+.number{
+	background-color: var(--section-color);
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+/* operator buttons color */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16){
+	font-size: 20px;
+	background-color: var(--yellow-color);
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color: var(--red-color);
+}
+/* end buttons */
